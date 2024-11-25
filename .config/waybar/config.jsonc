@@ -1,0 +1,91 @@
+{
+	"height": 42,
+	"margin": 20,
+
+	"modules-left": [
+		"hyprland/window",
+		"tray"
+		//"cava"
+	],
+
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+
+	"modules-right": [
+		"custom/spotify",
+		"wireplumber",
+		"memory",
+		"network",
+		"clock"
+	],
+
+	"custom/spotify": {
+    		"format": " {}",
+    		"escape": true,
+    		"return-type": "json",
+    		"max-length": 25,
+    		"on-click": "playerctl -p spotify play-pause",
+    		"on-click-right": "killall spotify",
+    		"smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    		"on-scroll-up" : "playerctl -p spotify next",
+    		"on-scroll-down" : "playerctl -p spotify previous",
+    		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+    		"exec-if": "pgrep spotify"
+	},
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": ""
+		}
+	},
+
+	"wireplumber": {
+    		"format": "{icon} {volume}%",
+    		"on-click": "pavucontrol",
+		"max-volume": 100,
+		"scroll-step": 2,
+		"format-icons": ["", "", ""]
+	},
+
+	"image#arch": {
+		"path": "/home/knight/Pictures/arch.png",
+		"size": 22
+
+	},
+
+	"memory": {
+		"interval": 30,
+		"format": " {}%"
+	},
+
+	"network": {
+		"format-wifi": "{icon} ",
+		"format-icons":[ "󰤯", "󰤟", "󰤢", "󰤨" ],
+		"interval": 2
+	},
+
+	"hyprland/window": {
+		"format": "{title}",
+		"icon": true,
+		"max-length": 20
+		
+	},
+
+	"tray": {
+		"icon-size": 20,
+		"spacing": 8
+	},
+
+	"cava": {
+
+
+                //"cava_config": "$XDG_CONFIG_HOME/cava/config"
+                   
+    }
+	
+	
+	
+}

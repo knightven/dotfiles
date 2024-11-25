@@ -1,0 +1,72 @@
+@import "mocha.css";
+
+* {
+	font-family: FiraCodeNerdFont;
+	margin: 0px;
+	padding: 0px;
+}
+
+window#waybar {
+	background: @base;
+	font-size: 16px;
+	border-radius: 10px;
+}
+
+#workspaces {
+	background-color: @crust;
+	padding: 0 10px;
+	margin:8px 0;
+	border-radius: 8px;
+}
+
+#workspaces button {
+	color: @blue;
+	padding: 0 10px 0 4px ;
+
+}
+
+
+#custom-spotify {
+	color: @green;
+	background-color: @crust;
+	margin: 8px 10px;
+	padding: 0 10px;
+	border-radius: 8px;
+
+}
+
+
+
+#wireplumber,
+#memory,
+#network,
+#clock {
+	background-color: @crust;
+	color: @pink;
+	padding: 0 10px;
+        margin: 8px 0;
+}
+
+#wireplumber {
+	border-radius: 8px 0 0 8px;
+}
+
+#clock {
+	margin-right: 10px;
+}
+
+#window {
+	background-color: @crust;
+	color: @color;
+	padding: 0 10px;
+	margin: 8px 10px;
+	border-radius: 0 8px 8px 0px;
+
+}
+
+#tray {
+	background-color: @crust;
+	padding: 0 10px;
+	margin: 8px 0;
+	border-radius: 10px;
+}
